@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priyanshu Chaudhary | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" data-aos="fade-down">
+    <div class="logo">Priyanshu <span>Chaudhary</span></div>
+    <button id="darkModeToggle" title="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Priyanshu Chaudhary</h1>
+      <p>Web Developer | Cyber Security Student</p>
+      <div class="buttons">
+        <a href="#resume" class="btn"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="#portfolio" class="btn"><i class="fas fa-briefcase"></i> Portfolio</a>
+      </div>
+      <div class="social">
+        <a href="https://github.com/Priyanshu6400"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/priyanshu-chaudhary-626264259/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:abhishantchaudhary917@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Profile Image" />
+    </div>
+  </section>
+
+  <!-- ======About Section=====-->
+  <section class="about" data-aos="fade-right">
+    <h2><i class="fas fa-user"></i> About Me</h2>
+    <p>
+      I'm a passionate Web Developer and Cyber Security student, currently interning at CodeSoft.
+      I love building user-friendly, functional web applications and improving my skills with hands-on projects.
+    </p>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume" data-aos="fade-left">
+    <h2><i class="fas fa-graduation-cap"></i> Resume</h2>
+    <div class="resume-grid">
+      <div>
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML / CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Networking Basics</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Languages Known</h3>
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>French</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <p>B.Tech in Cyber Security<br>NIET Greater Noida<br>2024 – 2025</p>
+        <h3>Internship</h3>
+        <p>CodeSoft - Web Development Intern<br>2025 (Ongoing)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio" data-aos="zoom-in">
+    <h2><i class=""></i> Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <img src="land.png" alt="Landing Page Project" class="project-image" />
+        <p>Creative and responsive page using HTML and CSS.</p>
+        <a href="#"></a>
+      </div>
+      <div class="project-card">
+        <h3>Basic Calculator</h3>
+        <img src="calculator.png" alt="Calculator Project" class="project-image" />
+        <p>Simple calculator built with HTML, CSS, and JavaScript.</p>
+        <a href="#"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contacts" data-aos="fade-up">
+    <h2><i class="fas fa-phone"></i> Contacts</h2>
+    <p><i class="fas fa-envelope"></i> Email: abhishantchaudhary917@gmail.com</p>
+    <p><i class="fas fa-phone-alt"></i> Phone: 9569292592</p>
+    <a href="resume.pdf" class="btn" download><i class="fas fa-download"></i> Download Resume (PDF)</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Priyanshu Chaudhary</p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Dark Mode Toggle
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      toggle.innerHTML = document.body.classList.contains("dark-mode") ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+      scrollBtn.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+    };
+    scrollBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hide Preloader
+    window.addEventListener("load", function () {
+      document.getElementById("preloader").style.display = "none";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* === Preloader === */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 5px solid #ccc;
+  border-top: 5px solid #00bcd4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#darkModeToggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 2rem 3rem;
+  margin-top: 70px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0097a7;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.social a:hover {
+  color: #00bcd4;
+}
+
+.hero-img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}
+
+/* === Section Titles === */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00bcd4;
+}
+
+/* === About Section === */
+.about p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* === Resume Section === */
+.resume-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.resume-grid div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.resume-grid h3 {
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+}
+
+.resume-grid ul {
+  padding-left: 20px;
+}
+
+.resume-grid ul li {
+  line-height: 1.8;
+}
+
+/* === Portfolio Section === */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  color: #00bcd4;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* === Contact Section === */
+.contact p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.contact .btn {
+  margin-top: 1rem;
+}
+
+/* === Footer === */
+footer {
+  background: #121212;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* === Scroll to Top Button === */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+body.dark-mode .navbar {
+  background-color: #e0e0e0;
+}
+
+body.dark-mode .btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.dark-mode .project-card {
+  background: #f5f5f5;
+  color: #000;
+}
+
+body.dark-mode .footer {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* === Media Queries === */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
